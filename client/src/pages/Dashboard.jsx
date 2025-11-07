@@ -19,7 +19,7 @@ function Dashboard() {
       try {
         const response = await verifyToken();
         setUser(response.user);
-      } catch (error) {
+      } catch {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         navigate("/login");

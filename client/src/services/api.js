@@ -55,4 +55,14 @@ export const verifyToken = async () => {
   return response.data;
 };
 
+export const verifyLoginCode = async (loginToken, code) => {
+  const response = await api.post("/auth/verify-email", { loginToken, code });
+  return response.data;
+};
+
+export const resendVerification = async (loginToken) => {
+  const response = await api.post("/auth/resend-verification", { loginToken });
+  return response.data;
+};
+
 export default api;
