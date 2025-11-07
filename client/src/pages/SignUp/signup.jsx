@@ -54,7 +54,8 @@ function Signup() {
 
         <main className="center h-full w-full  ">
              
-             <form action="" onSubmit={handleSubmit} className='flex items-center justify-evenly flex-col h-[90%] w-[90%] shadow-lg'>
+             <form action="" onSubmit={handleSubmit} className='flex items-center justify-evenly flex-col h-[90%] w-[90%] shadow-lg
+             md:w-[50%] lg:w-[40%]'>
                     <div className='w-full center w-[80%]'>
                         <legend className="fieldset-legend text-3xl font-semibold text-[var(--metal-dark2)]">Signup</legend>
                     </div>

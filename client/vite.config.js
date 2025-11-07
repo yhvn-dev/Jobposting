@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(),tailwindcss()],
   server:{
     proxy:{
-      "/api":{
+      "/api/user":{
         targeT:"http://localhost:5000",
         changeOrigin:true,
         secure:false

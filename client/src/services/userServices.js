@@ -11,3 +11,5 @@ export const sendEmail = async (email) =>{
         throw error
     }
 }
+
+

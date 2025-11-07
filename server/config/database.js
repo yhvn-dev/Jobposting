@@ -10,8 +10,8 @@ const pool = mysql2.createPool({
 });
 
 try {
-  console.log("database connected!");
+  console.log("Database connected!");
 } catch (error) {
-  console.error("database connection error");
+  console.error("Databasez connection error");
 }
 export default pool;
