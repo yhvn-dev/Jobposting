@@ -1,6 +1,21 @@
-import { json } from "express";
-import redis from "../../../config/redis.js";
+import pool from "../../../config/database.js";
 
-export async function createUser(email, data) {
-  await redis.set(`tempUser:${email}`, JSON.stringify(data), { ex: 300 });
+export async function createUserModel({
+  firstName,
+  lastName,
+  email,
+  mobileNumber,
+  role,
+  password,
+}) {
+  try {
+    const [rows] = await pool.query(
+      "INSERT INTO users (firstName,lastName,email,mobileNumber,role,password) VALUES (?,?,?,?,?,?)",
+      [firstName, lastName, email, mobileNumber, role, password]
+    );
+    return rows;
+  } catch (error) {
+    console.error("error inserting from database, creating user", error);
+    throw error;
+  }
 }

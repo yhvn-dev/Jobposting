@@ -1,4 +1,4 @@
-import { createUser } from "../../../models/user/auth/createUserModel.js";
+import { createTempUser } from "../../../models/user/auth/createTempUserModel.js";
 import { emailExists } from "../../../models/user/auth/emailExistsModel.js";
 import { generateOtp } from "../../../utils/generateOtp.js";
 import hashPassword from "../../../utils/hashPassword.js";
@@ -57,7 +57,7 @@ export async function verifyEmailController(req, res) {
       otp,
       password: hashedPassword,
     };
-    await createUser(email, tempData);
+    await createTempUser(email, tempData);
 
     await transporter.sendMail({
       from: '"Job Posting" <bicojayvee4@gmail.com>', // sender address
