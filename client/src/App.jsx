@@ -1,28 +1,23 @@
-import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import Home from "./pages/Home/home"
-import Login from "./pages/Login/login"
-import SignUp from "./pages/SignUp/signup"
-import Feed from "./pages/Feed/feed"
-
-import './index.css'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
-
   return (
-    <>
-
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/signup" element={<SignUp/>}/>
-        <Route path='/feed' element={<Feed/>}></Route>
-        
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
-        
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
