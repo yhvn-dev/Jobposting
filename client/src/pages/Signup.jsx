@@ -27,7 +27,7 @@ function Signup() {
     try {
       // Get reCAPTCHA token
       const recaptchaToken = await window.grecaptcha.execute(
-        "6LdUaQUsAAAAAFJ9t5eJXxEz7om9-eE-IArAD84K",
+        import.meta.env.VITE_RECAPTCHA_SITE_KEY,
         { action: "signup" }
       );
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { verifyToken } from "../services/api";
+import Loading from "../components/Loading";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ function Dashboard() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <div className="text-xl">Loading...</div>
+        <Loading />
       </div>
     );
   }

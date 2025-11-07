@@ -25,7 +25,7 @@ dotenv.config();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
-// reCAPTCHA verification
+// 🧠 reCAPTCHA verification
 const verifyRecaptcha = async (token) => {
   try {
     const res = await axios.post(

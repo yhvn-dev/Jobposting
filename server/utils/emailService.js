@@ -21,7 +21,7 @@ export const sendPasswordResetEmail = async (email, resetToken) => {
     subject: "Password Reset Request",
     html: `
       <h2>Password Reset Request</h2>
-      <p>You requested to reset your password. Click the link below to proceed:</p>
+      <p>Click the link to proceed:</p>
       <a href="${resetLink}">Reset Password</a>
       <p>This link will expire in 1 hour.</p>
       <p>If you didn't request this, please ignore this email.</p>
@@ -52,7 +52,7 @@ export const sendVerificationCode = async (email, code) => {
     subject: "Your Login Verification Code",
     html: `
       <h2>Your Login Verification Code</h2>
-      <p>Use this code to complete your login: <strong>${code}</strong></p>
+      <p><strong>${code}</strong></p>
       <p>This code will expire in 10 minutes.</p>
       <p>If you didn't request this, you can ignore this email.</p>
     `,
