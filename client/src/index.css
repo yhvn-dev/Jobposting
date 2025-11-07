@@ -1,3 +1,161 @@
 @import "tailwindcss";
 
 
+:root{
+
+    /* [PL1] FOUNDATIONS */
+    --main-white: hsl(258, 44%, 93%);
+    --white-blple: hsl(221, 32%, 77%);
+    --purpluish: hsl(225, 25%, 65%);
+    --bluis: hsl(220, 74%, 62%);
+    --mainblue: hsl(225, 46%, 44%);
+    --gainsbro: hsl(0, 0%, 96%);
+    --blue-white: hsl(195, 44%, 86%);
+    --color-dark--blue: hsl(225, 15%, 25%);
+
+    /* [PL3]MOON PHASE */
+    --moon-phases-a: hsl(204, 19%, 15%);
+    --moon-phases-b: hsl(210, 19%, 22%);
+    --moon-phases-c: hsl(197, 65%, 24%);
+    --moon-phases-d: hsl(192, 11%, 52%);
+    --moon-phases-e: hsl(120, 13%, 85%);
+
+
+
+   /* [PLR6] SNOW A */
+   --snow-blue-b:hsl(218, 39%, 76%);
+   --snow-blue-a:hsl(217, 36%, 40%);
+   --snow-blue-c:hsl(212, 65%, 89%);
+   --snow-white-a:hsl(0, 0%, 100%);
+
+    /* ASH 1 */
+    --ash1-darka: hsl(204, 21%, 15%);
+    --ash1-darkb: hsl(204, 18%, 27%);
+    --ash1-gray: hsl(204, 16%, 45%);
+    --ash1-lgray: hsl(204, 26%, 60%);
+
+    /* DARK MODE PALLETE */
+    --metal-dark1: hsl(0, 2%, 14%);
+    --metal-dark2: hsl(0, 1%, 25%);
+    --metal-dark3: hsl(0, 0%, 13%);
+    --metal-dark4: hsl(240, 2%, 53%);
+    --metal-dark5: hsl(0, 0%, 7%);
+
+    /* GRAYS */
+    --gray_1--: hsl(0, 0%, 50%);
+    --color-jk-dark: hsl(204, 19%, 15%);
+    --color-jk-dgray: hsl(210, 100%, 99%);
+
+    /* DARK */
+    --dark-variant: hsl(220, 7%, 19%);
+    --dark-variantb: hsl(0, 0%, 21%);
+    --color-dark-blue: hsl(210, 29%, 15%);
+
+    /* SIGNS */
+    --color-danger-a: hsl(355, 100%, 70%);
+    --color-danger-b: hsl(355, 70%, 80%);
+    --color-danger-c:hsl(353, 40%, 90%);
+    --color-warning: hsl(35, 80%, 70%);
+    --color-success-a: hsl(125, 85%, 60%);
+    --color-success-b: hsl(160,60%, 70%);
+    --color-success-c:hsl(150, 80%, 80%);
+ 
+
+    /* SHADOWS */
+    --shad-alpha: rgba(53,53,53,0.5);
+    --shad-alpha-b: rgba(53,53,53,0.4);
+    --shad-alpha-c: rgba(53,53,53,0.3);
+    --shad-alpha-d: rgba(53,53,53,0.2);
+    --shad-alpha-e: rgba(53,53,53,0.1);
+    
+    --shad-dark: rgb(0,0,0);
+
+    --shad-dark-b: rgba(0,0,0,0.7);
+    --shad-dark-c: rgba(0,0,0,0.6);
+    --shad-dark-d: rgba(0,0,0,0.5);
+    --shad-dark-e: rgba(0,0,0,0.4);
+    --shad-dark-f: rgba(0,0,0,0.3);
+    --shad-dark-g: rgba(0,0,0,0.2);
+    --shad-dark-h: rgba(0,0,0,0.1);
+
+
+    
+    /* 1.618  */
+    --fns-default-down-0-6:0.618rem;
+    --fns-down-1:0.8rem;
+    --fns-default-1:1rem;
+    --fns-up2:1.3rem;
+    --fns-default-up1-6:1.618rem;
+    --fns-up4:2.1rem;
+    --fns-default-up2-6:2.617rem;
+    --fns-default-up4-2:4.23rem;
+    --fns-default-up-6-8:6.84rem;
+
+    /* 1.618  */
+    --dis-0-6:0.618rem;       
+    --dis-1:1rem;
+    --dis-1:0.8rem;
+    --dis-1-3:1.3rem;
+    --dis-6:1.618rem;
+    --dis-4:2.1rem;
+    --dis-2-6:2.617rem;
+    --dis-4-2:4.23rem;
+    --dis-6-8:6.84rem;
+
+}
+
+
+
+@font-face {
+  font-family: "Mona";
+  src: url("./assets/Fonts/MonaSans-VariableFont_wdth\,wght.ttf");
+}
+
+
+*{
+  font-family: "Mona";
+}
+
+.center{
+  @apply flex items-center justify-center;
+}
+.center-l{
+  @apply flex items-center justify-start;
+}
+.center-tl{
+  @apply flex items-start justify-start;
+}
+.center-t{
+  @apply flex items-start justify-center;
+}
+.center-r{
+  @apply flex items-center justify-end;
+}
+.center-tr{
+  @apply flex items-start justify-end;
+}
+
+
+.column{
+  @apply flex items-center justify-center flex-col;
+}
+.column-t{
+   @apply flex items-center justify-start flex-col;
+}
+.column-t{
+   @apply flex items-start justify-start flex-col;
+}
+.full{
+  @apply w-full h-full;
+}
+
+
+.input-box label{
+  transition: 0.5s ease;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label{
+  transform: translateY(-100%);
+  font-size: 0.8rem;
+}
